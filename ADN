@@ -1,0 +1,130 @@
+def validar (base):
+    '''
+    (str) - (str)
+
+    Programa para validar si una base es de la cadena
+
+    >>> validar('A')
+    True
+
+    >>> validar('P')
+    False
+
+    >>> validar('F')
+    False
+
+    :param letra:
+    :return:
+    '''
+    bases = ["T", "A", "C", "G"]
+
+    base_1 = False
+
+    for i in bases:
+        if (base == i):
+            base_1 = True
+    return base_1
+
+def obt_compl(bases):
+    '''
+    (str) - (str)
+    Programa para obtener solo el complemento
+
+    >>> obt_compl("A")
+    'T'
+
+    >>> obt_compl("T")
+    'A'
+
+    >>> obt_compl("C")
+    'G'
+
+    :param base: Base a la cual se le va a buscar el complemento
+    :return: Complemento
+    '''
+    complementos = ""
+    if (bases == "A"):
+        complementos = "T"
+
+    elif (bases == "G"):
+        complementos = "C"
+
+    elif (bases == "T"):
+        complementos = "A"
+    else:
+        complementos = "G"
+
+    return complementos
+
+def complemento_base (base):
+    """
+    (str)-> (str)
+    Programa para complementar la base dada
+
+    >>> complemento_base('T')
+    'A'
+
+    >>> complemento_base('G')
+    'C'
+
+    >>> complemento_base('C')
+    'G'
+
+    :param base: base a complementar
+    :return: base complementada
+    """
+    comp_base = ''
+
+    if (base == 'C'):
+        comp_base = 'G'
+    elif (base == 'T'):
+        comp_base = 'A'
+    elif (base == 'G'):
+        comp_base = 'C'
+    else:
+        comp_base = 'T'
+    return comp_base
+
+def porcentaje (cadena1, cadena2):
+    """
+    (str),(str)-> (float)
+    Programa para hallar el porcentaje de correspondiente a las cadenas
+
+    >>> porcentaje("CG","GA")
+    50
+
+    >>> porcentaje("AT","GT")
+    0
+
+    >>> porcentaje ("AAAT","GCGA")
+    25
+
+    :param cadena1: primera cadena ingresada
+    :param cadena2: segunda cadena ingresada
+    :return: porcentaje de similitud de las cadenas
+    """
+
+def valida_cadenas(cadena1, cadena2):
+    """
+    (str),(str)-> (boolean)
+    Programa para validar si ambas cadenas esta correspondidas mutuamente
+
+    >>> valida_cadenas("A","T")
+    True
+
+    >>> valida_cadenas("A","G")
+    False
+
+    >>> valida_cadenas("G","C")
+    True
+
+    :param cadena1: Primera cadena ingresada
+    :param cadena2: segunda cadena ingresada
+    :return: valida si las cadenas son complementarias y retorna booleano
+    """
+
+    complemento_total = complemento_base(cadena1)
+    valida_corresp = False
+    if (complemento_total == cadena2):
+        valida_corresp = True
+    return valida_corresp
