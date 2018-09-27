@@ -13,8 +13,8 @@ def validar (base):
     >>> validar('F')
     False
 
-    :param letra:
-    :return:
+    :param base: ingresa una letra para saber si corresponde a una base
+    :return: booleano
     '''
     bases = ["T", "A", "C", "G"]
 
