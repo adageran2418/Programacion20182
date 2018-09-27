@@ -62,13 +62,13 @@ def complemento_base (base):
     Programa para complementar la base dada
 
     >>> complemento_base('T')
-    'A'
+    'AT'
 
     >>> complemento_base('G')
-    'C'
+    'CG'
 
     >>> complemento_base('C')
-    'G'
+    'GC'
 
     :param base: base a complementar
     :return: base complementada
@@ -76,11 +76,11 @@ def complemento_base (base):
     comp_base = ''
 
     if (base == 'C'):
-        comp_base = 'G'
+        comp_base = 'G' + base
     elif (base == 'T'):
-        comp_base = 'A'
+        comp_base = 'A' + base
     elif (base == 'G'):
-        comp_base = 'C'
+        comp_base = 'C' + base
     else:
         comp_base = 'T'
     return comp_base
@@ -115,8 +115,8 @@ def valida_cadenas(cadena1, cadena2):
     >>> valida_cadenas("A","G")
     False
 
-    >>> valida_cadenas("G","C")
-    True
+    >>> valida_cadenas("C","C")
+    False
 
     :param cadena1: Primera cadena ingresada
     :param cadena2: segunda cadena ingresada
@@ -128,3 +128,5 @@ def valida_cadenas(cadena1, cadena2):
     if (complemento_total == cadena2):
         valida_corresp = True
     return valida_corresp
+
+
